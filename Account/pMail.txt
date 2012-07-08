@@ -1,0 +1,7 @@
+﻿Tu Password ha sido reestablecido, <%UserName%> 
+
+De acuerdo a nuestros registros, has solicitado el cambio de tu password. tu nuevo password es: <%Password%>
+ 
+Si tienes duda contacta al administrador del sitio.
+ 
+Gracias.

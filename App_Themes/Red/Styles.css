@@ -1,0 +1,447 @@
+html {
+height : 100%;
+padding : 0;
+margin : 0;
+}
+
+body {
+font-family : Arial, Helvetica, sans-serif;
+font-size : 12px;
+padding : 0;
+margin : 0;
+width : 100%;
+background: #000000;
+}
+
+.page {
+background : url(images/page.png) repeat-y top;
+height : 1000px;
+padding : 0;
+margin : 0;
+}
+
+.banner {
+background : url(images/banner.png) no-repeat top;
+height : 150px;
+width : 945px;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /*background: #4b6c9e;
+    background-image:url('/App_Themes/Formal/Images/HeaderPattern.gif');
+    background-repeat:repeat-x;    */
+    width: 100%;
+}
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    /*background-color:#3a4f63;*/
+    width:100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+
+/* Other controls
+----------------------------------------------------------*/
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: Gray;
+}
+
+.phonetext {
+height : 61px;
+width : 220px;	
+color: #ffffff;
+font-size: 22px;
+font-weight: normal;
+font-family: Verdana, Geneva, sans-serif;
+padding: 22px 20px 0 0;
+}
+
+.phoneicon {
+background : url(images/phone.png) no-repeat top;
+margin: 10px 15px 0 0;
+height : 51px;
+width : 31px;
+}
+
+
+.logo {
+position : relative;
+left : 20px;
+top : 20px;
+background : url(images/logo.png) no-repeat top;
+height : 95px;
+width : 420px;
+}
+
+.tagline {
+color : #ffffff;
+font-weight : bold;
+padding : 20px 0 0 20px;
+width : 300px;
+}
+
+.wrap {
+width : 945px;
+margin : 0 auto;
+}
+
+.main {
+float : right;
+width : 720px;
+margin : 20px 20px 0 0;
+}
+
+.content {
+float: left;
+width: 664px;
+text-align: justify;
+margin: 0px 0px 30px 0;
+padding: 10px 10px 10px 10px;
+border-style: solid;
+border-color: #D3D3D3;
+border-width: 1px;
+}
+
+.sidebar {
+float : left;
+margin : 20px 0 0 0;
+width : 200px;
+font-family : Arial, Helvetica, sans-serif;
+font-size : 12px;
+}
+
+.sidebanner {
+position : relative;
+left: 20px;
+background : url(images/sidebanner.png) no-repeat top;
+height : 130px;
+width : 148px;
+margin-bottom: 50px;
+}
+.sidebannertext {
+padding: 10px;
+width: 148px;
+height: 110px;
+border-style: solid;
+border-width: 1px;
+border-color: #D3D3D3;
+}
+
+#nav {
+position : relative;
+left : 20px;
+font-size : 12px;
+width : 200px;
+height : 200px;
+margin-bottom:3px;
+}
+
+#navlist {
+position : relative;
+font-weight : normal;
+display : inline;
+padding : 0;
+line-height : 21px;
+}
+
+#navlist li {
+list-style-type : none;
+text-indent : 50px;
+display : inline;
+}
+
+#navlist li a {
+background : url(images/nav.png) no-repeat center top;
+width : 168px;
+height : 32px;
+float : left;
+color : #000000;
+height : 29px;
+padding-top : 4px;
+text-decoration : none;
+text-align : left;
+}
+
+#navlist li a:link {
+background : url(images/nav.png) no-repeat center top;
+width : 168px;
+height : 32px;
+float : left;
+color : #000000;
+height : 29px;
+padding-top : 4px;
+text-decoration : none;
+text-align : left;
+
+}
+
+#navlist li a:hover {
+background : url(images/nav-hover.png) no-repeat center top;
+width : 168px;
+height : 32px;
+float : left;
+color : #FF0000;
+height : 29px;
+padding-top : 4px;
+text-decoration : none;
+text-align : left;
+
+}
+
+#topleftlink li a.here {
+background : url(images/nav-hover.png) no-repeat center top;
+width : 168px;
+height : 32px;
+color : #8db711;
+text-align : left;
+
+}
+
+.box {
+width : 188px;
+text-align : left;
+margin : 30px 28px 45px 0;
+padding : 0px 10px 10px 10px;
+display : inline;
+border-style : solid;
+border-color : #D3D3D3;
+border-width : 1px;
+}
+
+.boxtitle {
+position: relative;
+top:-5px;
+font-size: 14px;
+color:#FFFFFF;
+}
+
+.a {
+background : url(images/boxtop.png) no-repeat top;
+}
+
+.b {
+background : url(images/boxtop.png) no-repeat top;
+}
+
+.c {
+background : url(images/boxtop.png) no-repeat top;
+}
+
+.left {
+float : left;
+}
+
+.right {
+float : right;
+}
+
+.footer {
+background : url(images/footer.png) no-repeat top;
+background-color : White;
+height : 250px;
+width : 945px;
+}
+
+.footer a, li {
+color : #ffffff;
+}
+
+.footerwrap {
+position : relative;
+top : 130px;
+left : 124px;
+}
+
+.footerbox {
+width : 188px;
+text-align : left;
+margin : 0 30px 0 0;
+padding : 5px 10px 5px 10px;
+display : inline;
+}
+
+.copyright {
+position: relative;
+top:110px;
+color : #FFFFFF;
+font-size : 10px;
+text-align : center;
+width : 945px;
+float : left;
+padding-top : 10px;
+}
+
+.copyright a {
+color : #FFFFFF;
+}
+
+/* Menu */
+
+ul.bg {background: url(images/button4a.gif);}
+ul.menu {padding:0 0 0 28px; margin:0; list-style:none; height:46px; background:#fff url(../../Images/title_bg.jpg) repeat-x; position:relative; font-family:arial, verdana, sans-serif; }
+ul.menu li.top {display:block; float:left; position:relative;}
+ul.menu li a.top_link {display:block; float:left; height:40px; line-height:33px; color:#FFF; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 12px; cursor:pointer;}
+ul.menu li a.top_link span {float:left; font-weight:bold; display:block; padding:0 24px 0 12px; height:40px;}
+ul.menu li a.top_link span.down {float:left; display:block; padding:0 24px 0 12px; height:40px; background:url(../../Images/down.gif) no-repeat right top;}
+ul.menu li a.top_link:hover {color:#000; background: url(../../Images/button4a.gif) no-repeat;}
+ul.menu li a.top_link:hover span {background:url(../../Images/button4a.gif) no-repeat right top;}
+ul.menu li a.top_link:hover span.down {background:url(../../Images/button4a.gif) no-repeat right top;}
+
+ul.menu li div.loginDisplay  {display:block; float:left; height:40px; line-height:33px; color:#FFF; text-decoration:none; font-size:11px; font-weight:bold; padding:0 0 0 12px; cursor:pointer;}
+
+ul.menu li:hover > a.top_link {color:#000; background: url(../../Images/button4a.gif) no-repeat;}
+ul.menu li:hover > a.top_link span {background:url(../../Images/button4a.gif) no-repeat right top;}
+ul.menu li:hover > a.top_link span.down {background:url(../../Images/button4a.gif) no-repeat right top;}
+
+ul.menu table {border-collapse:collapse; width:0; height:0; position:absolute; top:0; left:0;}
+
+ul.menu a:hover {visibility:visible;}
+ul.menu li:hover {position:relative; z-index:200;}
+
+ul.menu ul, 
+ul.menu li:hover ul ul, 
+ul.menu li:hover ul :hover ul ul,
+ul.menu li:hover ul :hover ul :hover ul ul,
+ul.menu li:hover ul :hover ul :hover ul :hover ul ul {position:absolute; left:-9999px; top:-9999px; width:0; height:0; margin:0; padding:0; list-style:none;}
+
+ul.menu li:hover ul.sub {left:2px; top:40px; right:2px; background: #fff; padding:3px 0; border:1px solid #999999; white-space:nowrap; width:200px;height:auto; max-height: 200px;overflow-y: auto;overflow-x: hidden; }
+ul.menu li:hover ul.sub li {display:block; height:20px; position:relative; float:left; width:250px;}
+ul.menu li:hover ul.sub li a {font-weight:normal;display:block; font-size:11px; height:20px; width:192px; line-height:20px; text-indent:5px; color:#000; text-decoration:none; border:3px solid #fff; border-width:0 0 0 3px;}
+ul.menu li:hover ul.sub li a.fly {background:#fff url(../../Images/arrow.gif) 80px 7px no-repeat;}
+ul.menu li:hover ul.sub li a:hover {background:#999999; color:#fff;}
+ul.menu li:hover ul.sub li a.fly:hover {background:#999999 url(../../Images/arrow_over.gif) 80px 7px no-repeat; color:#fff;}
+ul.menu li:hover ul li:hover > a.fly {background:#999999 url(../../Images/arrow_over.gif) 80px 7px no-repeat; color:#fff;} 
+
+ul.menu li:hover ul :hover ul,
+ul.menu li:hover ul :hover ul :hover ul,
+ul.menu li:hover ul :hover ul :hover ul :hover ul,
+ul.menu li:hover ul :hover ul :hover ul :hover ul :hover ul
+{left:90px; top:-4px; background: #fff; padding:3px 0; border:1px solid 999999; white-space:nowrap; width:93px; z-index:200; height:auto;}
+
+
+/*-------------------- definitions for Login form --------------------*/
+
+#login-box {
+	width:333px;
+	height: 352px;
+	padding: 58px 76px 0 76px;
+	color: #ebebeb;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url(images/login-box-backg.png) no-repeat left top;
+}
+
+#login-box img {
+	border:none;
+}
+
+#login-box h2 {
+	padding:0;
+	margin:0;
+	color: #ebebeb;
+	font: bold 44px "Calibri", Arial;
+}
+
+
+#login-box-name {
+	float: left;
+	display:inline;
+	width:80px;
+	text-align: right;
+	padding: 14px 10px 0 0;
+	margin:0 0 7px 0;
+}
+
+#login-box-field {
+	float: left;
+	display:inline;
+	width:230px;
+	margin:0;
+	margin:0 0 7px 0;
+}
+
+
+.form-login
+{
+    width: 205px;
+    padding: 10px 4px 6px 3px;
+    border: 1px solid #0d2c52;
+    background-color: #999999;
+    font-size: 16px;
+    color: #ebebeb;
+}
+
+
+.login-box-options  {
+	clear:both;
+	padding-left:87px;
+	font-size: 11px;
+}
+
+.login-box-options a {
+	color: #ebebeb;
+	font-size: 11px;
+}
+.modalBackground {
+    background-color:#333333;
+    filter:alpha(opacity=70);
+    opacity:0.7;
+}
+.modalPopup {
+    background-color:#FFFFFF;
+    border-width:1px;
+    border-style:solid;
+    border-color:#CCCCCC;
+    padding:1px;
+    width:300px;
+    Height:200px;
+} 

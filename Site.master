@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="SiteMaster" 
+ EnableTheming="true" Codebehind="Site.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Riesgos Laborales</title>
+    <script type="text/javascript" src="Scripts/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery-ui-1.8.13.custom.min.js"></script>
+    <script type="text/javascript" src="Scripts/utils.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.curvycorners.min.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+        <style type="text/css">
+        .level1
+        {
+        }
+        .level2
+        {
+        }
+        .level3
+        {
+        }
+        .sublevel1
+        {
+        }
+        .style4
+        {
+            background-repeat: repeat-y;
+            background-color: #3b76bc;
+            /*width: 190px;*/
+            margin: 0;
+            padding: 0;
+        }
+        .style5
+        {
+            width: 83px;
+        }
+        .style6
+        {
+           /* width: 57px;*/
+        }
+        .content_pane
+        {
+            background-repeat: repeat-y;
+            background-color: #555555;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .menu_pane
+        {
+            background-repeat: repeat-y;
+            background-color: #3b76bc; /*#555555;*/
+            width: 290px;
+            margin: 0;
+            padding: 0;
+        }
+        .div_menu_label
+        {
+        	background-color: #3b76bc;
+        	border: solid 0px #3b76bc;
+            width: 150px !important;
+            color:#FFFFFF;
+            font-size:10px;
+            font-weight:bold;
+            font-variant:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+        .menu_label
+        {
+            border: solid 0px #3b76bc; /*#555555;*/
+            background-color: #3b76bc; /*#555555;   */
+            color:#FFFFFF;
+            padding-top:7px; 
+            padding-left: 3px; 
+            font-size:10px;
+            font-weight:bold;
+            font-variant:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+        .txt_label
+        {
+        	background-color: #3b76bc; /*#555555;*/
+            border: solid 0px #3b76bc; /*#555555;*/
+            padding-top:5px; 
+            color: #FFFFFF;
+            font-size:12px;
+            font-weight:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+        .menu_top_label
+        {
+            border: solid 0px #555555;
+            background-color: #555555;
+            width: 120px !important;
+            padding-left: 3px;
+            color:#FFFFFF;
+            font-size:10px;
+            font-weight:bold;
+            font-variant:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+        .txt_top_label
+        {
+        	background-color: #555555;
+        	border: solid 0px #555555;
+            color: #FFFFFF;
+            padding-top:4px;   
+            width: 80%;
+            font-size:10px;
+            font-weight:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+        .comboProject
+        {
+        	/*
+        	background-color: #555555;
+        	border: solid 1px #555555;
+        	*/
+            color: #FFFFFF;
+            width: 80%;
+            font-size:10px;
+            font-weight:normal;
+            font-family:Arial, Verdana, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="wrap">
+        <div class="page">
+            <div class="banner">
+                <div class="right">
+                    <div class="phoneicon left">
+                    </div>
+                    <div class="phonetext">
+                        0800 1234567</div>
+                <ul class="menu" >
+                    <li class="top">
+                        <div class="loginDisplay">
+                            <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                                <AnonymousTemplate>
+                                    [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                                    ]
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    Welcome <span class="bold">
+                                        <asp:LoginName ID="HeadLoginName" runat="server" />
+                                    </span>! [
+                                    <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                                        LogoutPageUrl="~/" />
+                                    ]
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </div>
+                        <ul class="sub" style="width:270px">
+                            <li><a href="/Account/ChangePassword.aspx">Change Password</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </div>
+                <div class="logo">
+                </div>
+            </div>
+            <div class="header">
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                        IncludeStyleBlock="false" Orientation="Horizontal" 
+                        oninit="NavigationMenu_Init">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Inicio" />
+                            <asp:MenuItem NavigateUrl="~/Search/Search.aspx" Text="Busqueda" />
+                            <asp:MenuItem NavigateUrl="~/About.aspx" Text="Acerca de" />
+                        </Items>
+                    </asp:Menu>
+                </div>
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footerwrap">
+                <div class="footerbox left">
+                    <ul>
+                        <li><a href="#">Testimonio de Clientes</a></li>
+                    </ul>
+                </div>
+                <div class="footerbox left">
+                    <ul>
+                        <li><a href="#">Consultas Online</a></li>
+                    </ul>
+                </div>
+                <div class="footerbox left">
+                    <ul>
+                        <li><a href="#">Paquetes de Servicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>
+                    &copy;2012 - Riesgo Laboral
+                    <!-- Do Not Edit Below This Line - Link Must Remain Unchanged For Legal Template Use  -->
+                    - Design By Lease4less <a href="http://www.lease4less.org.uk">Car Leasing</a><!--%@##-->
+                    Design provided by <a href="http://www.freewebtemplates.com/">Free Website Templates</a>.<!--##@%--></p>
+            </div>
+        </div>
+    
+    </div>
+    </form>
+</body>
+</html>

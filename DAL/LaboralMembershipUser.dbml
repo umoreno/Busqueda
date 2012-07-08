@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="laboral" Class="LaboralMembershipUserDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=laboral.mssql.somee.com;Initial Catalog=laboral;Persist Security Info=True;User ID=ulises" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ApplicationServices" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ApPaterno" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ApMaterno" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Colonia" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CodigoPostal" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TelFijo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TelExtension" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TelMovil" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserErrorTable" Member="UserErrorTables">
+    <Type Name="UserErrorTable">
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ApPaterno" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ApMaterno" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Colonia" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CodigoPostal" Type="System.Decimal" DbType="Decimal(5,0) NOT NULL" CanBeNull="false" />
+      <Column Name="TelFijo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TelExtension" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TelMovil" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.InsUpdUserDetails" Method="InsUpdUserDetails">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="ApPaterno" Parameter="apPaterno" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="ApMaterno" Parameter="apMaterno" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Company" Parameter="company" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Direccion" Parameter="direccion" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Colonia" Parameter="colonia" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Municipio" Parameter="municipio" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="Estado" Parameter="estado" Type="System.String" DbType="VarChar(40)" />
+    <Parameter Name="CodigoPostal" Parameter="codigoPostal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="TelFijo" Parameter="telFijo" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="TelMovil" Parameter="telMovil" Type="System.String" DbType="VarChar(15)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UsersDetailsbyID" Method="UsersDetailsbyID">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Guid" DbType="UniqueIdentifier" />
+    <ElementType Name="UsersDetailsbyIDResult">
+      <Column Name="Company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nombre" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ApPaterno" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="ApMaterno" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="Direccion" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Colonia" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="Municipio" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Estado" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="CodigoPostal" Type="System.Decimal" DbType="Decimal(5,0)" CanBeNull="true" />
+      <Column Name="TelFijo" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TelExtension" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="TelMovil" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

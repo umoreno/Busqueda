@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pequenoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="pequenoModelStoreContainer">
+          <EntitySet Name="Demandado" EntityType="pequenoModel.Store.Demandado" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Expediente" EntityType="pequenoModel.Store.Expediente" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Junta" EntityType="pequenoModel.Store.Junta" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="Demandado">
+          <Key>
+            <PropertyRef Name="cve_demandado" />
+          </Key>
+          <Property Name="cve_demandado" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_demandado" Type="varchar" MaxLength="500" />
+          <Property Name="Comentario" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Expediente">
+          <Key>
+            <PropertyRef Name="id_expediente" />
+          </Key>
+          <Property Name="id_expediente" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Num_expediente" Type="varchar" MaxLength="20" />
+          <Property Name="año" Type="numeric" />
+          <Property Name="fcve_junta" Type="numeric" />
+          <Property Name="nom_actor" Type="varchar" MaxLength="500" />
+          <Property Name="fcve_demandado" Type="numeric" />
+        </EntityType>
+        <EntityType Name="Junta">
+          <Key>
+            <PropertyRef Name="cve_junta" />
+          </Key>
+          <Property Name="cve_junta" Type="numeric" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_junta" Type="varchar" MaxLength="500" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="500" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pequenoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="pequenoEntities6" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Demandadoes" EntityType="pequenoModel.Demandado" />
+          <EntitySet Name="Expedientes" EntityType="pequenoModel.Expediente" />
+          <EntitySet Name="Juntas" EntityType="pequenoModel.Junta" />
+        </EntityContainer>
+        <EntityType Name="Demandado">
+          <Key>
+            <PropertyRef Name="cve_demandado" />
+          </Key>
+          <Property Name="cve_demandado" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_demandado" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Comentario" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Expediente">
+          <Key>
+            <PropertyRef Name="id_expediente" />
+          </Key>
+          <Property Name="id_expediente" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Num_expediente" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="año" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="fcve_junta" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="nom_actor" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="fcve_demandado" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Junta">
+          <Key>
+            <PropertyRef Name="cve_junta" />
+          </Key>
+          <Property Name="cve_junta" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Desc_junta" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pequenoModelStoreContainer" CdmEntityContainer="pequenoEntities6">
+          <EntitySetMapping Name="Demandadoes"><EntityTypeMapping TypeName="pequenoModel.Demandado"><MappingFragment StoreEntitySet="Demandado">
+            <ScalarProperty Name="cve_demandado" ColumnName="cve_demandado" />
+            <ScalarProperty Name="Desc_demandado" ColumnName="Desc_demandado" />
+            <ScalarProperty Name="Comentario" ColumnName="Comentario" />
+          </MappingFragment></EntityTypeMapping>
+            </EntitySetMapping>
+          <EntitySetMapping Name="Expedientes"><EntityTypeMapping TypeName="pequenoModel.Expediente"><MappingFragment StoreEntitySet="Expediente">
+            <ScalarProperty Name="id_expediente" ColumnName="id_expediente" />
+            <ScalarProperty Name="Num_expediente" ColumnName="Num_expediente" />
+            <ScalarProperty Name="año" ColumnName="año" />
+            <ScalarProperty Name="fcve_junta" ColumnName="fcve_junta" />
+            <ScalarProperty Name="nom_actor" ColumnName="nom_actor" />
+            <ScalarProperty Name="fcve_demandado" ColumnName="fcve_demandado" />
+          </MappingFragment></EntityTypeMapping>
+            </EntitySetMapping>
+          <EntitySetMapping Name="Juntas"><EntityTypeMapping TypeName="pequenoModel.Junta"><MappingFragment StoreEntitySet="Junta">
+            <ScalarProperty Name="cve_junta" ColumnName="cve_junta" />
+            <ScalarProperty Name="Desc_junta" ColumnName="Desc_junta" />
+            <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Laboral">
+        <EntityTypeShape EntityType="pequenoModel.Demandado" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pequenoModel.Expediente" Width="1.5" PointX="2.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="pequenoModel.Junta" Width="1.5" PointX="6" PointY="1" Height="1.5956835937499996" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

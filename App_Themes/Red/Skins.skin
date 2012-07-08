@@ -1,0 +1,6 @@
+﻿
+<asp:Image ImageUrl="~/App_Themes/Formal/Images/Logo.png"
+    skinID="Logo" runat="server" />
+
+<asp:ImageButton runat="server" SkinId="LoginButton" ImageUrl="Images/login-btn.png" />
+
